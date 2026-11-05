@@ -1,0 +1,11 @@
+Done. The ECLIPSE homepage layout is now fixed:
+
+**Hero** — shorter (60vh vs 100vh), headline centered vertically, smaller text, fits first screen at 1366×720.
+**Grid** — cards narrowed from 280px to 260px, gap reduced, overflow eliminated at both breakpoints.
+**Sections** — top padding reduced from 100px to 60px.
+**Filters** — two new buttons (Graphic Tees, Cargo), smaller buttons across breakpoints.
+**Pricing** — draft MAD price table in PRICING.md (12 products, Moroccan retailer comparables).
+**Images** — 12 WebP assets in images/products/ (Unsplash temporary placeholders; replace with own stock before launch).
+**Tested** — desktop 1366×720 and mobile ≈390×844 both have no horizontal overflow, hero fits, all 12 products render, cart visible.
+
+Open the homepage at http://127.0.0.1:54123/ to verify.

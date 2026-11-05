@@ -1,0 +1,54 @@
+ECLIPSE Hero Height Fix — Complete
+
+**Changes made to `css/styles.css`:**
+
+1. Added CSS variable to `:root`:
+   ```css
+   --header-height: 72px;
+   ```
+   (matches the `#navbar` height of 72px from `.nav-container { height: 72px; }`)
+
+2. Hero height — desktop (default, >768px width):
+   ```css
+   .hero {
+     min-height: calc(100svh - var(--header-height));
+     /* = calc(100svh - 72px) — roughly 648px at 1366×720 */
+   }
+   ```
+
+3. Hero height — mobile (≤768px width):
+   ```css
+   @media (max-width: 768px) {
+     .hero { min-height: 75svh; }
+     /* = 75% of viewport height */
+   }
+   ```
+
+4. Hero content vertical centering (already present, preserved):
+   - `.hero-title` has `display: flex; align-items: center; justify-content: center; height: 100%; margin: 0;`
+   - The HTML `<h1 class="hero-title">Be the <span>Exception</span></h1>` already has a space between "the" and the span
+
+5. Background media — unchanged:
+   - `.hero-video { width:100%; height:100%; object-fit: cover; }` — full-width, covers hero area
+   - `.hero-media { position:absolute; inset:0; z-index:0; transform: scale(1.05); }` — stays full-width
+
+**Verification at breakpoints:**
+
+| Metric | Desktop (1366×720) | Mobile (≈390×844) |
+|---|---|---|
+| Hero min-height | `calc(100svh - 72px)` ≈ 648px | `75svh` ≈ 633px |
+| No horizontal overflow | ✅ `docW` fits viewport | ✅ `docW` fits viewport |
+| Navbar height | ✅ 72px (matches `--header-height`) | ✅ 72px |
+| Space "the" + "Exception" | ✅ preserved | ✅ preserved |
+| Products above fold | ❌ requires scroll (as requested) | depends on viewport |
+| Products below fold | ✅ yes — after scrolling | hero takes more space |
+
+**Key outcomes:**
+- Hero is much taller than the previous `min-height: 60vh` / `60vh`
+- At desktop 1366×720: hero ≈ 648px, Products section requires scrolling down (no longer visible on first screen)
+- At mobile: hero uses 75svh, content vertically centered, space between "the" and "Exception" visible
+- No horizontal scrollbar at either breakpoint
+- Background video/media covers the full taller hero area
+- All existing colors, fonts, cart behavior, and filter functionality preserved
+
+**Open the homepage at `http://127.0.0.1:54123/` to verify.**

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECLIPSE — Minimal Luxury</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-glitch"></div>
+    <div class="loader-content">
+      <div class="loader-logo" data-text="ECLIPSE">ECLIPSE</div>
+    </div>
+  </div>
+
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">ECLIPSE</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="news.html">News</a>
+      </div>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <i class="fas fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-media">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="">
+        <source src="https://files.catbox.moe/i36b5f.mp4" type="video/mp4">
+      </video>
+      <div class="hero-fallback"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Be the <span>Exception</span></h1>
+      <p class="hero-desc">Street culture meets refined aesthetics</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-primary">Shop Now</a>
+        <a href="#products" class="btn-outline">Explore Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section products">
+    <div class="section-header">
+      <h2 class="section-title">Products</h2>
+      <p class="section-desc accent">Made for nights, built for the streets.</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="oversized-tees">Oversized Tees</button>
+      <button class="filter-btn" data-filter="graphic-tees">Graphic Tees</button>
+      <button class="filter-btn" data-filter="baggy-jeans">Baggy Jeans</button>
+      <button class="filter-btn" data-filter="cargo">Cargo</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+
+
+  <section class="editorial-banner">
+    <div class="editorial-img-wrap">
+      <img src="https://files.catbox.moe/gjpprq.png" alt="Eclipse Banner">
+    </div>
+    <div class="editorial-strip">
+      <span>FOR SHIPPING CASH ON DELIVERY DM US ON WHATSAPP</span>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="section-header">
+      <p class="section-tag">FOR NEWS</p>
+      <h2 class="section-title">Get exclusive updates, new drops, and early access.</h2>
+    </div>
+    <div class="contact-grid">
+      <form class="contact-form" id="contactForm">
+        <input type="email" placeholder="Email" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+      <div class="contact-info"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>ECLIPSE</h3>
+        <p>Streetwear inspired by modern urban culture.<br>Made for nights, built for the streets.</p>
+      </div>
+      <div class="footer-links">
+        <h4>SHOP</h4>
+        <a href="#">All Products</a>
+        <a href="#">T-Shirts</a>
+        <a href="#">Jeans</a>
+        <a href="#">New Drops</a>
+      </div>
+      <div class="footer-links">
+        <h4>SUPPORT</h4>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>FOLLOW</h4>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="news.html">News</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ECLIPSE. All rights reserved. Made for nights, built for the streets.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="cartClose" aria-label="Close cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <i class="fas fa-bag-shopping"></i>
+        <p>Your cart is empty</p>
+        <span>Add some pieces to get started.</span>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span id="cartTotal">0 MAD</span></div>
+      <button class="checkout-whatsapp" id="checkoutWhatsApp">
+        <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="product-modal" id="productModal">
+    <button class="modal-close" id="modalClose" aria-label="Close modal"><i class="fas fa-times"></i></button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECLIPSE — News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0D0D0D;
+      color: #F5EFE6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 24px;
+      max-width: 700px;
+      animation: fadeUp 1.2s ease-out;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem;
+      letter-spacing: 8px;
+      color: #B89E8A;
+      margin-bottom: 48px;
+      font-weight: 400;
+    }
+    .label {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #B89E8A;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    .heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      color: #F5EFE6;
+      margin-bottom: 20px;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+    .desc {
+      font-size: 0.95rem;
+      color: rgba(245,239,230,0.5);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      background: #470000;
+      color: #F5EFE6;
+      border: 1px solid #470000;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: transparent;
+      color: #F5EFE6;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">ECLIPSE</div>
+    <p class="label">NEWS</p>
+    <h1 class="heading">COMING SOON</h1>
+    <p class="desc">Exclusive updates, new drops, and future collections will be announced here.</p>
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+</body>
+</html>
